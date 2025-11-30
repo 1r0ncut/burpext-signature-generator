@@ -6,7 +6,7 @@ It was originally developed during a mobile application penetration test, where 
 
 ---
 
-## Background & Features
+## Background & Features 
 
 In the analysed application, once the user completed the login flow:
 
@@ -16,7 +16,7 @@ In the analysed application, once the user completed the login flow:
     - Included an `X-Signature` header whose value was the **digital signature of the request body**.
 - The backend verified each request by validating the signature against the body with the stored public key.
 
-![json-body.png](assets/json-body.png)
+![json-body.png](docs/img/json-body.png)
 
 On compromised devices (rooted Android / jailbroken iOS), it was possible to extract the private key used to sign the payload (for example from an Android secure storage file or from the iOS Keychain). Once the key was obtained, a Burp extension was written to:
 
